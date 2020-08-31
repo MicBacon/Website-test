@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Wpisywanie tekstu do bieżącego dokumentu</title>
+    <script type="text/javascript">
+      function reWrite(){
+        //przygotowanie zawartości nowego okna
+        var newContent = "<html><head><title>Nowy dokument</title></head>"
+
+        newContent += `<body bgcolor = 'aqua'><h1>
+        Ten dokument jest całkiem nowy.</h1>`
+
+        newContent += "Naciśnij przycisk Back (Wstecz),\
+        aby zobaczyć dokument ortginalny."
+
+        newContent += "</body></html>"
+
+        //wpisanie dokumentu HTML do nowego okna
+        document.write(newContent)
+        document.close() //koniec wpisywania tekstu
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <input type="button" name="baton" value="Zmień zawartość strony."
+      onclick="reWrite()">
+    </form>
+  </body>
+</html>
